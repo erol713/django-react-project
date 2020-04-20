@@ -6,4 +6,8 @@ def home(request):
 
 
 def welcome(request):
-    return render(request, 'base/welcome.html', {})
+    return render(request, 'base/logIn/welcome.html', {})
+
+
+def upload(request):
+    return render(request, 'base/uploadData/uploadData.html', {})

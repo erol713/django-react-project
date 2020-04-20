@@ -33,7 +33,7 @@
   </head>
   <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="{% url 'welcome'  %}">
         <img style="margin-left: 15px;" src="{% static '/images/letterLogo.png' %}"> 
       </a>
       
@@ -75,17 +75,25 @@
         </li>
       </ul>
     </nav>
+
+    <!--SideNav-->
+
     <div id="layoutSidenav">
       <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
           <div class="sb-sidenav-menu">
             <div class="nav">
               <div class="sb-sidenav-menu-heading">Core</div>
-              <a class="box nav-link" href="index.html"
+              <a class="box nav-link" href="{% url 'home'  %}"
                 ><div class="sb-nav-link-icon">
                   <i class="fas fa-tachometer-alt"></i>
                 </div>
                 Dashboard</a>
+                <a class="box nav-link" href="{% url 'upload'  %}"
+                ><div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Upload Data</a>
               <div class="sb-sidenav-menu-heading">Interface</div>
               <a
                 class=" box nav-link collapsed"
@@ -213,6 +221,9 @@
       {% endblock %}
       </div>
     </div>
+
+
+    <!--JS scripts-->
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -225,14 +236,14 @@
     <script src="{% static 'js/scripts.js' %}"></script>
 
     <!--
-      Demo charts
+      Link to charts
     -->
         <script src="{% static 'assets/demo/deploymentChart.js'%}"></script>
         <script src="{% static 'assets/demo/chart-bar-demo.js'%}"></script>
         <script src="{% static 'assets/demo/locationChart.js'%}"></script>
         <script src="{% static 'assets/demo/summaryServer.js'%}"></script>
 
-
+<!--Link to tables-->
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="{% static 'https://cdn.datatables.net/1.1'%}0.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="{% static 'assets/demo/datatables-demo.js'%}"></script>

@@ -1,0 +1,107 @@
+.card-header {
+  color: #008aad !important;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #fff !important;
+  border-bottom: 1px solid rgba(0, 138, 173, 0.3) !important;
+  font-weight: bold;
+}
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  font-size: larger;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 60%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 138, 173, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 138, 173, 0.3);
+  -moz-box-shadow: 0 30px 60px 0 rgba(0, 138, 173, 0.3);
+
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1 {
+  color: #2cacc9;
+  border-bottom: 2px solid #2cacc9;
+  -webkit-box-shadow: 0 10px 3px -3px rgba(0, 138, 173, 0.3);
+  -moz-box-shadow: 0 10px 3px -3px rgba(0, 138, 173, 0.3);
+  box-shadow: 0 10px 3px -3px rgba(0, 138, 173, 0.3);
+}
+
+.card a {
+  color: #2cacc9 !important;
+}
+.card a:hover {
+  font-weight: bold;
+}
+
+.card .btn {
+  background-color: #fff;
+  border: 1px solid #2cacc9;
+}
+
+.card .btn:hover {
+  background-color: #008aad;
+  border: 1px solid #2cacc9;
+  color: #fff !important;
+}
+
+.card-title {
+  font-size: large;
+  padding: 10px;
+}
+
+.logo-78s {
+  float: right;
+  padding: 20px;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-height: 100vh;
+  padding: 20px;
+}
+
+.modal-title {
+  color: #2cacc9 !important;
+  font-weight: bold;
