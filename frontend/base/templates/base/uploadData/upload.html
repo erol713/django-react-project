@@ -1,3 +1,10 @@
+{% load static %}
+<script>
+  function uploadComplete(val) {
+    document.getElementById(val.toString()).src =
+      "{% static '/images/complete.png' %}";
+  }
+</script>
 <div
   class="modal fade"
   id="LVQupload"
@@ -14,8 +21,19 @@
         <h4 class="modal-title" id="LVQuploadLabel">LVQ</h4>
       </div>
       <div class="modal-body">
-        Here we will present detailed process and security options so that they
-        can inform themselfs
+        <img
+          class="img-responsive"
+          id="upload"
+          src="{% static '/images/upload.gif' %}"
+        />
+      </div>
+      <div class="modal-footer">
+        <div class="modalBtns">
+          <a type="button" class="btn">Browse</a>
+          <a type="button" class="btn close" onclick="uploadComplete('upload')"
+            >Finish upload</a
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -37,8 +55,23 @@
         <h4 class="modal-title" id="OutputsUploadLabel">OUTPUTS</h4>
       </div>
       <div class="modal-body">
-        Here we will present detailed process and security options so that they
-        can inform themselfs
+        <img
+          class="img-responsive"
+          id="upload2"
+          src="{% static '/images/upload.gif' %}"
+        />
+      </div>
+      <div class="modal-footer">
+        <div class="modalBtns">
+          <a type="button" class="btn">Browse</a>
+          <a
+            type="button"
+            class="btn close"
+            value="upload2"
+            onclick="uploadComplete('upload2')"
+            >Finish upload</a
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -60,8 +93,19 @@
         <h4 class="modal-title" id="ScreenshotsUploadLabel">SCREENSHOTS</h4>
       </div>
       <div class="modal-body">
-        Here we will present detailed process and security options so that they
-        can inform themselfs
+        <img
+          class="img-responsive"
+          id="upload3"
+          src="{% static '/images/upload.gif' %}"
+        />
+      </div>
+      <div class="modal-footer">
+        <div class="modalBtns">
+          <a type="button" class="btn">Browse</a>
+          <a type="button" class="btn close" onclick="uploadComplete('upload3')"
+            >Finish upload</a
+          >
+        </div>
       </div>
     </div>
   </div>
