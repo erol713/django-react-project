@@ -92,7 +92,46 @@ hr {
   height: 0;
   overflow: visible;
 }
-h1 { font-family: "Open Sans"; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Open Sans"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Open Sans"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Open Sans"; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Open Sans"; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+h1 {
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+h3 {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+blockquote {
+  font-family: "Open Sans";
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+pre {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
 
 h1,
 h2,
@@ -4204,7 +4243,7 @@ input[type="button"].btn-block {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
+  padding-left: 5;
   margin-bottom: 0;
   list-style: none;
   margin-left: 5px;
@@ -4212,7 +4251,7 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.3rem;
 
   margin-bottom: 10px;
 }
@@ -4224,6 +4263,10 @@ input[type="button"].btn-block {
   color: #fff;
   pointer-events: none;
   cursor: default;
+}
+
+.sb-sidenav-collapse-arrow {
+  margin-right: 0 !important;
 }
 
 .nav-tabs {
@@ -4558,8 +4601,8 @@ input[type="button"].btn-block {
   position: absolute;
 }
 .navbar-expand .navbar-nav .nav-link {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
 }
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
@@ -10698,6 +10741,7 @@ body {
   border-radius: 5px;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding-left: 10px;
 }
 
 .box::after {

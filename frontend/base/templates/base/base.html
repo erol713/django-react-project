@@ -89,41 +89,14 @@
                 ><div class="sb-nav-link-icon">
                   <i class="fas fa-tachometer-alt"></i>
                 </div>
-                Analysis</a>
+                Summary</a>
                 <a class="box nav-link" href="{% url 'upload'  %}"
                 ><div class="sb-nav-link-icon">
-                  <i class="fas fa-tachometer-alt"></i>
+                  <i class="fas fa-upload"></i>
                 </div>
                 Upload Data</a>
-              <div class="sb-sidenav-menu-heading">Interface</div>
-              <a
-                class=" box nav-link collapsed"
-                href="#"
-                data-toggle="collapse"
-                data-target="#collapseLayouts"
-                aria-expanded="false"
-                aria-controls="collapseLayouts"
-                ><div class="sb-nav-link-icon">
-                  <i class="fas fa-columns"></i>
-                </div>
-                Layouts
-                <div class="sb-sidenav-collapse-arrow">
-                  <i class="fas fa-angle-down"></i></div
-              ></a>
-              <div
-                class="collapse"
-                id="collapseLayouts"
-                aria-labelledby="headingOne"
-                data-parent="#sidenavAccordion"
-              >
-                <nav class="sb-sidenav-menu-nested nav">
-                  <a class="nav-link" href="layout-static.html"
-                    >Static Navigation</a
-                  ><a class="nav-link" href="layout-sidenav-light.html"
-                    >Light Sidenav</a
-                  >
-                </nav>
-              </div>
+              <div class="sb-sidenav-menu-heading">Detailed Deployment</div>
+              
               <a
                 class="box nav-link collapsed"
                 href="#"
@@ -132,9 +105,9 @@
                 aria-expanded="false"
                 aria-controls="collapsePages"
                 ><div class="sb-nav-link-icon">
-                  <i class="fas fa-book-open"></i>
+                  <i class="far fa-hdd"></i>
                 </div>
-                Pages
+                Backup  
                 <div class="sb-sidenav-collapse-arrow">
                   <i class="fas fa-angle-down"></i></div
               ></a>
@@ -155,47 +128,56 @@
                     data-target="#pagesCollapseAuth"
                     aria-expanded="false"
                     aria-controls="pagesCollapseAuth"
-                    >Authentication
-                    <div class="sb-sidenav-collapse-arrow">
-                      <i class="fas fa-angle-down"></i></div
-                  ></a>
-                  <div
-                    class="collapse"
-                    id="pagesCollapseAuth"
-                    aria-labelledby="headingOne"
-                    data-parent="#sidenavAccordionPages"
-                  >
-                    <nav class="sb-sidenav-menu-nested nav">
-                      <a class="nav-link" href="login.html">Login</a
-                      ><a class="nav-link" href="register.html">Register</a
-                      ><a class="nav-link" href="password.html"
-                        >Forgot Password</a
-                      >
-                    </nav>
-                  </div>
-                  <a
+                    >File library
+                    </a>
+                    <a
                     class="nav-link collapsed"
                     href="#"
                     data-toggle="collapse"
-                    data-target="#pagesCollapseError"
+                    data-target="#pagesCollapseAuth"
                     aria-expanded="false"
-                    aria-controls="pagesCollapseError"
-                    >Error
-                    <div class="sb-sidenav-collapse-arrow">
-                      <i class="fas fa-angle-down"></i></div
-                  ></a>
-                  <div
-                    class="collapse"
-                    id="pagesCollapseError"
-                    aria-labelledby="headingOne"
-                    data-parent="#sidenavAccordionPages"
+                    aria-controls="pagesCollapseAuth"
+                    >DiskStore
+                    </a>
+                    <a
+                    class="nav-link collapsed"
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#pagesCollapseAuth"
+                    aria-expanded="false"
+                    aria-controls="pagesCollapseAuth"
+                    >VTL
+                    </a>
+                  
+                  
+                </nav>
+              </div>
+              <a
+                class=" box nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapseLayouts"
+                aria-expanded="false"
+                aria-controls="collapseLayouts"
+                ><div class="sb-nav-link-icon">
+                  <i class="fas fa-columns"></i>
+                </div>
+                Stores
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i></div
+              ></a>
+              <div
+                class="collapse"
+                id="collapseLayouts"
+                aria-labelledby="headingOne"
+                data-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="layout-static.html"
+                    >D2D</a
+                  ><a class="nav-link" href="layout-sidenav-light.html"
+                    >StoreOnce</a
                   >
-                    <nav class="sb-sidenav-menu-nested nav">
-                      <a class="nav-link" href="401.html">401 Page</a
-                      ><a class="nav-link" href="404.html">404 Page</a
-                      ><a class="nav-link" href="500.html">500 Page</a>
-                    </nav>
-                  </div>
                 </nav>
               </div>
               <div class="sb-sidenav-menu-heading">Detailed analysis</div>
@@ -203,12 +185,12 @@
                 ><div class="sb-nav-link-icon">
                   <i class="fas fa-chart-area"></i>
                 </div>
-                Charts</a
+                ESX Hosts</a
               ><a class="box nav-link" href="tables.html"
                 ><div class="sb-nav-link-icon">
                   <i class="fas fa-table"></i>
                 </div>
-                Tables</a
+                Online Backup</a
               >
             </div>
           </div>
