@@ -64,6 +64,7 @@ pre {
   min-height: 100%;
   padding: 20px;
   font-size: x-large;
+  border-radius: 10px 10px 10px 10px !important;
 }
 
 .wrapper {

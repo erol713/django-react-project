@@ -1,8 +1,12 @@
 {% load static %}
 <script>
-  function uploadComplete(val) {
+  function uploading(val) {
     document.getElementById(val.toString()).src =
-      "{% static '/images/complete.png' %}";
+      "{% static '/images/loading.gif' %}";
+
+    setTimeout(function () {
+      document.getElementById(val).src = "{% static '/images/complete2.png' %}";
+    }, 2000);
   }
 </script>
 <div
@@ -30,7 +34,7 @@
       <div class="modal-footer">
         <div class="modalBtns">
           <a type="button" class="btn">Browse</a>
-          <a type="button" class="btn close" onclick="uploadComplete('upload')"
+          <a type="button" class="btn close" onclick="uploading('upload');"
             >Finish upload</a
           >
         </div>
@@ -68,7 +72,7 @@
             type="button"
             class="btn close"
             value="upload2"
-            onclick="uploadComplete('upload2')"
+            onclick="uploading('upload2')"
             >Finish upload</a
           >
         </div>
@@ -93,16 +97,12 @@
         <h4 class="modal-title" id="ScreenshotsUploadLabel">SCREENSHOTS</h4>
       </div>
       <div class="modal-body">
-        <img
-          class="img-responsive"
-          id="upload3"
-          src="{% static '/images/upload.gif' %}"
-        />
+        <img class="img-responsive" src="{% static '/images/upload.gif' %}" />
       </div>
       <div class="modal-footer">
         <div class="modalBtns">
           <a type="button" class="btn">Browse</a>
-          <a type="button" class="btn close" onclick="uploadComplete('upload3')"
+          <a type="button" class="btn close" onclick="uploading('upload3')"
             >Finish upload</a
           >
         </div>

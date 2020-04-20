@@ -11,3 +11,7 @@ def welcome(request):
 
 def upload(request):
     return render(request, 'base/uploadData/uploadData.html', {})
+
+
+def tech(request):
+    return render(request, 'base/tech/techPanel.html', {})
