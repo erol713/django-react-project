@@ -1,0 +1,43 @@
+.jumbocard {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  width: 50% !important;
+  border: none;
+  align-items: center;
+}
+
+.jumbocard h1 {
+  color: #2cacc9;
+}
+
+.jumbocard .btn {
+  background-color: #fff;
+  color: #008aad;
+  border: 1px solid #008aad;
+}
+
+.jumbocard a {
+  font-size: large;
+}
+
+.jumbocard .btn:hover {
+  background-color: #008aad;
+  color: #fff;
+  border: 1px solid #008aad;
+}
+.my-4 {
+  border-bottom: 1px solid #2cacc9 !important;
+  width: 60%;
+}
+
+.piechart-container {
+  min-height: 400px;
+  width: 100%;
+}
