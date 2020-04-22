@@ -21,7 +21,15 @@ var compliance = {
       method: 5,
       speed: 900,
       sequence: 1,
-      delay: 1000,
+      delay: 800,
+    },
+    title: {
+      fontColor: "#343a40",
+      text: "Compliance summary",
+      align: "right",
+      offsetX: 10,
+      fontFamily: "Open Sans",
+      fontSize: 16,
     },
   },
   plotarea: {
@@ -57,7 +65,6 @@ var compliance = {
       text: "Online backup for Unix",
       values: [6],
       backgroundColor: "#0A92B3",
-      detached: true,
       dataUsage: [5],
     },
     {

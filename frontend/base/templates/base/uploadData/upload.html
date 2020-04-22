@@ -97,12 +97,20 @@
         <h4 class="modal-title" id="ScreenshotsUploadLabel">SCREENSHOTS</h4>
       </div>
       <div class="modal-body">
-        <img class="img-responsive" src="{% static '/images/upload.gif' %}" />
+        <img
+          class="img-responsive"
+          id="upload3"
+          src="{% static '/images/upload.gif' %}"
+        />
       </div>
       <div class="modal-footer">
         <div class="modalBtns">
           <a type="button" class="btn">Browse</a>
-          <a type="button" class="btn close" onclick="uploading('upload3')"
+          <a
+            type="button"
+            class="btn close"
+            value="upload3"
+            onclick="uploading('upload3')"
             >Finish upload</a
           >
         </div>
