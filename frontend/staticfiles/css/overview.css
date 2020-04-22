@@ -1,12 +1,8 @@
 .jumbocard {
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
   background: #fff;
-  padding: 30px;
   width: 100%;
   max-width: 500px;
   position: relative;
-  padding: 20px;
   text-align: center;
   width: 50% !important;
   border: none;
@@ -35,6 +31,11 @@
 .my-4 {
   border-bottom: 1px solid #2cacc9 !important;
   width: 60%;
+}
+
+.lead {
+  color: #008aad;
+  font-weight: bold;
 }
 
 .piechart-container {

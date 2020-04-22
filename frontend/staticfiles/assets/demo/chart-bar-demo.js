@@ -33,8 +33,6 @@ var vBarConfig = {
   plotarea: {
     adjustLayout: true,
     margin: "dynamic",
-    "border-top": "1px solid grey",
-    "border-right": "1px solid grey",
   },
   "scale-x": {
     "auto-fit": true,

@@ -1,89 +1,109 @@
-{% extends 'base/navbars/sidenav.html' %} {% block content %}
+{% extends 'base/navbars/sidenav.html' %} {% block content %}{%block body %}
+<body class="sb-nav-fixed sb-sidenav-toggled">
+  {% endblock %}
 
-<!--
+  <!--
        content
       -->
-<div id="layoutSidenav_content">
-  <main>
-    <div class="container-fluid">
-      <h1 class="mt-4"></h1>
+  <div id="layoutSidenav_content">
+    <main>
+      <div class="container-fluid">
+        <h1 class="mt-4"></h1>
 
-      <!--CONTENT-->
-      <div class="row">
-        <!--INSTANCES-->
-        <div class="card col-xl-4 jumbocard">
-          <h1 class="display-1">6</h1>
-          <p class="lead">
-            Cell managers deployed
-          </p>
-          <hr class="my-4" />
-          <p class="lead">
-            <a class="btn btn-md" href="#" role="button"
-              >Graph out deployment</a
-            >
-          </p>
+        <!--CARDS-->
+
+        <div class="row">
+          <!--INSTANCES-->
+          <div class="card col-xl-3 mb-4 col-md-6 jumbocard">
+            <h1 class="display-1">7</h1>
+            <hr class="my-4" />
+            <p class="lead">
+              Product Scope
+            </p>
+          </div>
+
+          <div class="card col-xl-3 mb-4 col-md-6 jumbocard">
+            <h1 class="display-1">1</h1>
+            <hr class="my-4" />
+            <p class="lead">
+              Product Not Deployed
+            </p>
+          </div>
+
+          <div class="card col-xl-3 mb-4 col-md-6 jumbocard">
+            <h1 class="display-1">6</h1>
+            <hr class="my-4" />
+            <p class="lead">
+              Products Analysed
+            </p>
+          </div>
+
+          <div class="card col-xl-3 mb-4 col-md-6 jumbocard">
+            <h1 class="display-1">1</h1>
+            <hr class="my-4" />
+            <p class="lead">
+              Product Missing Data
+            </p>
+          </div>
+          <!--END INSTANCES-->
         </div>
-        <!--END INSTANCES-->
+
+        <!--END CARDS-->
 
         <!--CHARTS-->
 
-        <div class="col-xl-8">
-          <div style="float: right!important;" class="card-header-tab">
-            <i class="fas fa-chart-pie"></i>Compliance summary
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="card-header-tab">
+              <i class="fas fa-chart-bar mr-1"></i>Compliancy summary
+            </div>
+
+            <div class="card mb-4">
+              <!--graph-->
+              <div class="card-body">
+                <div class="chart-container" id="myBarChart"></div>
+              </div>
+            </div>
           </div>
 
-          <div class="card chartCard mb-4">
-            <!--graph-->
-            <div class="card-body">
-              <div class="piechart-container" id="complianceChart"></div>
+          <div class="col-xl-6">
+            <div class="card-header-tab">
+              <i class="fas fa-chart-bar mr-1"></i>Gap possibility
+            </div>
+
+            <div class="card mb-4">
+              <!--graph-->
+              <div class="card-body">
+                <div class="chart-container" id="gapDetails"></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-xl-6">
-          <div class="card-header-tab">
-            <i class="fa fa-map-marker mr-1"></i>Deployment location
-          </div>
+        <!--END CHARTS-->
 
-          <div class="card mb-4">
-            <!--graph-->
-            <div class="card-body">
-              <div class="chart-container" id="locationChart"></div>
-            </div>
-          </div>
+        <!-- PA EA -->
+
+        <div class="card mb-4">
+          <div class="card-header"><i class="fas fa-table mr-1"></i>PA EA</div>
         </div>
 
-        <div class="col-xl-6">
-          <div class="card-header-tab">
-            <i class="fas fa-chart-bar mr-1"></i>Deployment information
+        <!-- END PA EA -->
+      </div>
+    </main>
+    <footer class="py-4 bg-light mt-auto">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between small">
+          <div class="text-muted">Copyright &copy; Erol Mrzic 2020</div>
+          <div>
+            <a href="#">Privacy Policy</a>
+            &middot;
+            <a href="#">Terms &amp; Conditions</a>
           </div>
-
-          <div class="card mb-4">
-            <!--graph-->
-            <div class="card-body">
-              <div class="chart-container" id="deploymentChart"></div>
-            </div>
-          </div>
-        </div>
-
-      <!--END CHARTS-->
-
-    </div>
-  </main>
-  <footer class="py-4 bg-light mt-auto">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center justify-content-between small">
-        <div class="text-muted">Copyright &copy; Erol Mrzic 2020</div>
-        <div>
-          <a href="#">Privacy Policy</a>
-          &middot;
-          <a href="#">Terms &amp; Conditions</a>
         </div>
       </div>
-    </div>
-  </footer>
-</div>
-<!--
-      Demo content
-    -->
-{% endblock %}
+    </footer>
+  </div>
+
+  {% endblock %}
+</body>
