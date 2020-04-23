@@ -45,7 +45,7 @@ zingchart.render({
         "background-color": "#008aad",
       },
       {
-        values: [1, 2, 1, 0],
+        values: [],
         text: "Development",
         "background-color": "#2cacc9",
       },

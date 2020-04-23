@@ -4,15 +4,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <body>
-    <form action="submit" method="GET">
-      {%csrf_token%}
-      <input type="text" name="info" /><br />
-      <input type="submit" value="Submit" />
-    </form>
-    <p id="ja">{{ data }}</p>
+    <button id="button" type="GET"></button>
+
+    <script>
+      $("#button").click(function () {
+        $.get("submit", function (data) {
+          alert("Data: " + data);
+        });
+      });
+    </script>
+    <p id="ja">{{ data}}</p>
   </body>
 </html>
