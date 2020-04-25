@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 import json
 from base.scrpits.dp import dpsum
+from base.scrpits.dpw import dpword
+from django.http import JsonResponse
 
 
 def home(request):
@@ -30,7 +32,12 @@ def test(request):
 
 def dp(request):
     response = dpsum(request)
-    return HttpResponse({response})
+    return JsonResponse(response, safe=False)
+
+
+def dpw(request):
+    response = dpword(request)
+    return JsonResponse(response, safe=False)
 
 
 def reportUpload(request):

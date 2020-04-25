@@ -10,7 +10,9 @@ urlpatterns = [
     path('test', views.test, name='test'),
     path('reportUpload', views.reportUpload, name='reportUpload'),
 
-    path('dp', views.dp)
+    path('dp', views.dp),
+    path('dpw', views.dpw)
+
 
 
 ]

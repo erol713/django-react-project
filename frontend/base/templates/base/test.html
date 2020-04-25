@@ -14,9 +14,24 @@
     <button id="button" type="GET"></button>
 
     <script>
-      $("#button").click(function () {
-        $.get("dp", function (data) {
-          alert("Data: " + data);
+      $("document").ready(function () {
+        $.get("dpw", function (data) {
+          for (var key in data) {
+            var instl = [];
+            var used = [];
+            var lic = [];
+
+            for (var k in data[key][0]) {
+              instl.push(data[key][0][k]);
+            }
+            for (var k in data[key][1]) {
+              used.push(data[key][1][k]);
+            }
+            for (var k in data[key][2]) {
+              lic.push(data[key][2][k]);
+            }
+            console.log(instl, used, lic);
+          }
         });
       });
     </script>

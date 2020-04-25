@@ -21,17 +21,10 @@ def dpsum(request):
     summ = df[:x]
     summ = summ[summ['DATA PROTECTOR'].notnull()]
     summ = summ[(summ['Production'] != 0) | (summ['Non-production'] != 0)]
-    prod = summ.drop(['values', 'Non-production'], axis=1)
-    nonp = summ.drop(['values', 'Production'], axis=1)
+    summ = summ.drop('values', axis=1)
+    summ = summ.reset_index(drop=True)
+    summ['Licenses'] = summ['DATA PROTECTOR']
+    summ = summ.drop('DATA PROTECTOR', axis=1)
+    summ = summ.to_json()
 
-    prod = prod.drop('DATA PROTECTOR', axis=1)
-    prod = prod.reset_index(drop=True)
-
-    nonp = nonp.drop('DATA PROTECTOR', axis=1)
-    nonp = nonp.reset_index(drop=True)
-
-    prod = prod['Production'].to_json(orient='values')
-    licenses = summ['DATA PROTECTOR'].to_json(orient="values")
-    nonp = nonp['Non-production'].to_json(orient='values')
-
-    return (prod, nonp, licenses)
+    return (summ)

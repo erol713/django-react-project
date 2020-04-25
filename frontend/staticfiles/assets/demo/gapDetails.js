@@ -1,59 +1,71 @@
-window.addEventListener("load", () => {
-  var myConfigXe = {
-    type: "bar",
-    plot: {
-      "bars-overlap": "100%",
+$("document").ready(function () {
+  $.get("dpw", function (data) {
+    for (var key in data) {
+      var instl = [];
+      var used = [];
+      var lic = [];
 
-      rules: [
-        {
-          rule: "%plot-0-value > %plot-1-value",
-          backgroundColor: "green",
-        },
-        {
-          rule: "%plot-0-value < %plot-1-value",
-          backgroundColor: "red",
-        },
-      ],
+      for (var k in data[key][0]) {
+        instl.push(data[key][0][k]);
+      }
+      for (var k in data[key][1]) {
+        used.push(data[key][1][k]);
+      }
+      for (var k in data[key][2]) {
+        lic.push(data[key][2][k]);
+      }
+      console.log(lic);
 
-      tooltip: {
-        fontSize: "15",
-        fontFamily: "Open Sans",
-        padding: "5 10",
-        text: "%plot-0-value\n licensed, %plot-1-value used",
-      },
-    },
-    scaleX: {
-      label: {
-        text: "Gap details",
-      },
-    },
-    series: [
-      {
-        //plot 0 values
-        values: [70, 50, 75, 51, 70, 73],
-        alpha: 0.5,
-        "hover-state": {
-          visible: true,
-        },
-      },
+      var myConfigXe = {
+        type: "bar",
+        plot: {
+          "bars-overlap": "100%",
 
-      {
-        //plot 1 values
-        values: [80, 77, 91, 86, 67, 76],
-        "background-color": "#008aad",
-        alpha: 0.9,
-        "bar-width": "40%",
-        "hover-state": {
-          visible: true,
+          tooltip: {
+            fontSize: "15",
+            fontFamily: "Open Sans",
+            padding: "5 10",
+            text: "%v",
+          },
         },
-      },
-    ],
-  };
+        "scale-x": {
+          values: lic,
+          item: {
+            "font-angle": -45,
+          },
+        },
+        "scale-y": {
+          progression: "log",
+        },
+        series: [
+          {
+            //plot 0 values
+            values: instl,
+            alpha: 0.5,
+            "hover-state": {
+              visible: true,
+            },
+          },
 
-  zingchart.render({
-    id: "gapDetails",
-    data: myConfigXe,
-    height: "100%",
-    width: "100%",
+          {
+            //plot 1 values
+            values: used,
+            "background-color": "#008aad",
+            alpha: 0.9,
+            "bar-width": "40%",
+            "hover-state": {
+              visible: true,
+            },
+          },
+        ],
+      };
+
+      $("#gapDetails").zingchart({
+        id: "gapDetails",
+        data: myConfigXe,
+        height: "100%",
+        width: "100%",
+      });
+    }
   });
 });

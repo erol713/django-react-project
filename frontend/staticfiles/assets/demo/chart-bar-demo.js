@@ -83,7 +83,7 @@ var vBarConfig = {
 };
 
 zingchart.render({
-  id: "myBarChart",
+  id: "a",
   data: vBarConfig,
   height: "100%",
   width: "100%",
