@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 import numpy as np
 
 
@@ -8,6 +9,7 @@ def dpsum(request):
         'reports/Vivacom - Data Protector/Report/Vivacom Data Protector Deployment Table.xlsx')
 
     df = df[1:]  # take the data less the header row
+
     new_header = df.iloc[0]  # grab the first row for the header
     df.columns = new_header
     df = df[1:]
@@ -18,20 +20,18 @@ def dpsum(request):
 
     summ = df[:x]
     summ = summ[summ['DATA PROTECTOR'].notnull()]
-    prod = summ[summ['Production'] != 0].drop(
-        ['values', 'Non-production'], axis=1)
-    nonp = summ[summ['Non-production'] !=
-                0].drop(['values', 'Production'], axis=1)
+    summ = summ[(summ['Production'] != 0) | (summ['Non-production'] != 0)]
+    prod = summ.drop(['values', 'Non-production'], axis=1)
+    nonp = summ.drop(['values', 'Production'], axis=1)
 
-    licenses = summ['DATA PROTECTOR']
     prod = prod.drop('DATA PROTECTOR', axis=1)
     prod = prod.reset_index(drop=True)
 
     nonp = nonp.drop('DATA PROTECTOR', axis=1)
     nonp = nonp.reset_index(drop=True)
 
-    prod = prod.to_json()
-    licenses = licenses.to_json()
-    nonp = nonp.to_json()
+    prod = prod['Production'].to_json(orient='values')
+    licenses = summ['DATA PROTECTOR'].to_json(orient="values")
+    nonp = nonp['Non-production'].to_json(orient='values')
 
     return (prod, nonp, licenses)
