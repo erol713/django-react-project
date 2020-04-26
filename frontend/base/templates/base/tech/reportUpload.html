@@ -1,16 +1,30 @@
-{% load static %}
+{% extends 'base/uploadData/uploadHeader.html' %} {% block content %}
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Document</title>
-  </head>
-  <body>
-    Helloo
-  </body>
-</html>
+<div class="title">
+  <h1>Upload Final Pack</h1>
+</div>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-xl-12 col-md-12">
+      <div id="formContent">
+        <div class="card">
+          <div class="card-header">
+            Upload
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">- Final Report and Analysis data-</h5>
+            <a
+              type="button"
+              data-toggle="modal"
+              href="{% url 'upload'  %}"
+              class="btn"
+              >Upload Data</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
