@@ -1,4 +1,4 @@
-$("document").ready(function () {
+/*$("document").ready(function () {
   $.get("dpw", function (data) {
     for (var key in data) {
       var instl = [];
@@ -19,6 +19,7 @@ $("document").ready(function () {
 
       var myConfigXe = {
         type: "bar",
+
         plot: {
           "bars-overlap": "100%",
           animation: {
@@ -101,3 +102,4 @@ $("document").ready(function () {
     }
   });
 });
+*/

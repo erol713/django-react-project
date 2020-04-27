@@ -1,12 +1,11 @@
 var vBarConfig = {
   graphset: [
     {
-      id: "years",
       x: "0%",
       y: "0%",
       type: "bar",
       tooltip: {
-        text: "%v",
+        text: "%v%",
         fontSize: "15",
       },
 
@@ -38,13 +37,14 @@ var vBarConfig = {
       plot: {
         "bars-overlap": "100%",
         rules: [],
+        animation: {
+          effect: "ANIMATION_SLIDE_BOTTOM",
+          sequence: "0",
+          speed: "800",
+          delay: "800",
+        },
       },
-      animation: {
-        effect: "ANIMATION_SLIDE_BOTTOM",
-        sequence: "0",
-        speed: "800",
-        delay: "800",
-      },
+
       "scale-y": {
         values: "0:100:25",
         "min-value": 0,
@@ -69,9 +69,11 @@ var vBarConfig = {
     },
   ],
 };
-zingchart.render({
+
+/*zingchart.render({
   id: "myBarChart",
   data: vBarConfig,
   height: "100%",
   width: "100%",
 });
+*/

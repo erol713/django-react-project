@@ -13,20 +13,27 @@
   color: #2cacc9;
 }
 
-.jumbocard .btn {
-  background-color: #fff;
-  color: #008aad;
-  border: 1px solid #008aad;
-}
-
 .jumbocard a {
   font-size: large;
 }
 
-.jumbocard .btn:hover {
-  background-color: #008aad;
-  color: #fff;
-  border: 1px solid #008aad;
+.jumbocard:hover {
+  background-color: #2cacc9;
+  color: #fff !important;
+  border: 1px solid #2cacc9;
+}
+
+.jumbocard:hover h1 {
+  color: #fff !important;
+}
+
+.jumbocard:hover p {
+  color: #fff !important;
+}
+
+.jumbocard:hover hr {
+  border-bottom: 1px solid #fff !important;
+  width: 60%;
 }
 .my-4 {
   border-bottom: 1px solid #2cacc9 !important;
@@ -41,4 +48,50 @@
 .piechart-container {
   min-height: 400px;
   width: 100%;
+}
+
+.details {
+  margin-top: 3rem;
+}
+.details .nav-tabs .nav-link:hover {
+  color: #008aad !important;
+}
+.active-list {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+.list-group-flush {
+  width: 30%;
+  padding-inline-start: 20px !important;
+}
+
+.list-group-item {
+  background-color: #fff;
+  border: 1px solid #2cacc9;
+}
+.details .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #2cacc9;
+  border-color: #2cacc9 #2cacc9 #2cacc9;
+}
+.details .nav-tabs .nav-link {
+  border-bottom: 1px solid #2cacc9;
+  font-weight: bold;
+}
+
+.details .nav {
+  padding-inline-start: 0px !important;
+  margin-top: 1rem;
+}
+
+.details .nav-tabs {
+  border-bottom: none;
+}
+
+.lists {
+  background-color: #fff !important;
 }
