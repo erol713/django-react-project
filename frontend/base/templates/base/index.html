@@ -90,7 +90,7 @@
 
         <!-- LIST-->
 
-        <div class="details">
+        <div class="details noshow">
           <section class="row">
             <div class="lists col-xl-6">
               <ul class="nav nav-tabs">
@@ -208,6 +208,13 @@
 
   <script>
     $(function () {
+      $(".jumbocard").click(function (e) {
+        $(".details").removeClass("noshow");
+        $(".details").addClass("show");
+        //e.preventDefault();
+      });
+    });
+
       $(".tab-link").on("click", function () {
         // Switch the class on the previously active div to make it hidden
         $(".active-list").removeClass("active-list").addClass("inactive");
@@ -217,6 +224,7 @@
           .removeClass("inactive")
           .addClass("active-list");
       });
+
       $(".jumbocard").click(function (e) {
         $(".nav-link").removeClass("active");
 
@@ -226,7 +234,6 @@
         }
         //e.preventDefault();
       });
-    });
 
     $(document).ready(function () {
       $(".nav-link").click(function (e) {

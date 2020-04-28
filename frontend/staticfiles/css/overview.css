@@ -95,3 +95,11 @@
 .lists {
   background-color: #fff !important;
 }
+
+.noshow {
+  display: none;
+}
+
+.show {
+  display: block;
+}
