@@ -10795,23 +10795,4 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.DownloadBtn {
-  background-color: #fff;
-  border: 1px solid #2cacc9;
-  color: #088aad !important;
-  font-weight: bold;
-}
 
-.DownloadBtn:hover {
-  background-color: #008aad;
-  border: 1px solid #2cacc9;
-  color: #fff !important;
-}
-
-.ButtonWrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 30px;
-}
